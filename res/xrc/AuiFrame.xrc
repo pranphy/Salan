@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="AuiFrame">
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<size>681,333</size>
+		<title>स्वागत छ सबैलाई हामी विद्यार्थीको</title>
+		<centered>1</centered>
+		<aui_managed>0</aui_managed>
+		<object class="wxMenuBar" name="m_menubar1">
+			<label>MyMenuBar</label>
+			<object class="wxMenu" name="m_menu1">
+				<label>File</label>
+				<object class="wxMenuItem" name="m_menuItem1">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="m_menuItem2">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="m_menuItem3">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="m_menu2">
+				<label>Edit</label>
+				<object class="wxMenuItem" name="m_menuItem4">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="m_menuItem5">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="m_menuItem6">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="m_menuItem7">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="m_menuItem8">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="m_menuItem9">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="m_menuItem10">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+				<object class="wxMenu" name="m_menu11">
+					<label>MyMenu</label>
+					<object class="wxMenuItem" name="m_menuItem11">
+						<label>MyMenuItem</label>
+						<help></help>
+					</object>
+					<object class="wxMenuItem" name="m_menuItem12">
+						<label>MyMenuItem</label>
+						<help></help>
+					</object>
+					<object class="wxMenuItem" name="m_menuItem13">
+						<label>MyMenuItem</label>
+						<help></help>
+					</object>
+				</object>
+			</object>
+			<object class="wxMenu" name="m_menu3">
+				<label>Help</label>
+			</object>
+		</object>
+		<object class="wxAuiNotebook" name="m_auinotebook1">
+			<style>wxAUI_NB_DEFAULT_STYLE</style>
+			<object class="notebookpage">
+				<label>a page</label>
+				<selected>0</selected>
+				<bitmap />
+				<object class="wxPanel" name="m_panel1">
+					<style>wxTAB_TRAVERSAL</style>
+				</object>
+			</object>
+			<object class="notebookpage">
+				<label>a page</label>
+				<selected>0</selected>
+				<bitmap />
+				<object class="wxPanel" name="m_panel2">
+					<style>wxTAB_TRAVERSAL</style>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>
+s

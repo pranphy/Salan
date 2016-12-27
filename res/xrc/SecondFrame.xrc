@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="NewFrame">
+		<style>wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL</style>
+		<size>985,606</size>
+		<title>स्वागत छ सबैलाई हामी विद्यार्थीको</title>
+		<centered>1</centered>
+		<aui_managed>0</aui_managed>
+		<object class="wxStaticBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<label>हामी नेपाली</label>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALIGN_CENTER|wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxGridBagSizer">
+					<vgap>0</vgap>
+					<hgap>0</hgap>
+					<growablecols>0</growablecols>
+					<growablerows>0</growablerows>
+					<object class="sizeritem">
+						<cellpos>0,0</cellpos>
+						<cellspan>1,1</cellspan>
+						<flag>wxALIGN_CENTER|wxHORIZONTAL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxTextCtrl" name="ID_WordInputTCtrl">
+							<style>wxTE_CENTRE|wxTE_PROCESS_ENTER</style>
+							<value></value>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<cellpos>1,0</cellpos>
+						<cellspan>1,1</cellspan>
+						<flag>wxALIGN_CENTER|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="ID_FirstButton">
+							<pos>-1,-1</pos>
+							<label>MyButton</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<cellpos>2,0</cellpos>
+						<cellspan>1,1</cellspan>
+						<flag>wxALIGN_CENTER|wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="ID_MeaningSText">
+							<font>
+								<family>roman</family>
+								<style>normal</style>
+								<weight>bold</weight>
+								<underlined>0</underlined>
+							</font>
+							<label></label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+		<object class="wxMenuBar" name="m_menubar1">
+			<label>MyMenuBar</label>
+			<object class="wxMenu" name="m_menu1">
+				<label>File</label>
+				<object class="wxMenuItem" name="m_menuItem1">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="m_menuItem2">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="m_menuItem3">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="m_menu2">
+				<label>Edit</label>
+				<object class="wxMenuItem" name="m_menuItem4">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="m_menuItem5">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="m_menuItem6">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="m_menuItem7">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="m_menuItem8">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="m_menuItem9">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="m_menuItem10">
+					<label>MyMenuItem</label>
+					<help></help>
+				</object>
+				<object class="wxMenu" name="m_menu11">
+					<label>MyMenu</label>
+					<object class="wxMenuItem" name="m_menuItem11">
+						<label>MyMenuItem</label>
+						<help></help>
+					</object>
+					<object class="wxMenuItem" name="m_menuItem12">
+						<label>MyMenuItem</label>
+						<help></help>
+					</object>
+					<object class="wxMenuItem" name="m_menuItem13">
+						<label>MyMenuItem</label>
+						<help></help>
+					</object>
+				</object>
+			</object>
+			<object class="wxMenu" name="m_menu3">
+				<label>Help</label>
+			</object>
+		</object>
+	</object>
+</resource>

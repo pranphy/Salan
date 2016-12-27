@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<resource_extra>
+		<object root="1" />
+		<object name="ID_FirstButton" class="wxButton" variable="FirstButton" member="yes" />
+		<object name="ID_SecondButton" class="wxButton" variable="SecondButton" member="yes" />
+		<object name="ID_BUTTON1" class="wxButton" variable="Button1" member="yes" />
+		<object name="ID_FileOpen" class="wxMenuItem" variable="MenuItem1" member="yes" />
+		<object name="ID_FileSave" class="wxMenuItem" variable="MenuItem2" member="yes" />
+		<object name="ID_FileClose" class="wxMenuItem" variable="MenuItem3" member="yes" />
+		<object name="ID_StatusBar" class="wxStatusBar" variable="StatusBar1" member="yes" />
+	</resource_extra>
+</wxsmith>

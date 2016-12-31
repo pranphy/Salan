@@ -16,10 +16,13 @@ class WordSrv():
         self.word_info = ord_vocab.get_object()
         self.meaning_fetched = True
 
-    def get_short_def(self):
-
+    def getMeaning(self):
         return self.word_info['meaning']
 
-    def get_long_def(self):
+    def get_short_def(self):
+
+        return self.word_info['shortdef']
+
+    def getLongDef(self):
         return self.word_info['longdef']
 

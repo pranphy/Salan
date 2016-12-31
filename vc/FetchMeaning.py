@@ -57,8 +57,8 @@ class OrderVocab():
                 example_list= [] 
                 for obj in sent_dict['result']['sentences']:
                     sent_info = {}
-                    sent_info['sentence'] = obj['sentence'].encode("utf-8")
-                    sent_info['url'] = obj['volume']['locator'].encode("utf-8")
+                    sent_info['sentence'] = obj['sentence']
+                    sent_info['url'] = obj['volume']['locator']
                     example_list.append(sent_info)
                 #end for
                 return  example_list
@@ -82,8 +82,9 @@ class OrderVocab():
             voc_page = urlopen(vocurl)
             soup = BeautifulSoup(voc_page)
 
-            shortdef = soup.select('.definitionsContainer .main .section p.short')[0]
-            longdef = soup.select('.definitionsContainer .main .section p.long')[0]
+            shortdef = (soup.select('.definitionsContainer .main .section p.short')[0]).get_text()
+
+            longdef = (soup.select('.definitionsContainer .main .section p.long')[0]).get_text()
 
             #now try to get the meaning
             filtered = soup.select('.definitions .definition .group .first .definition')[0]
@@ -93,9 +94,9 @@ class OrderVocab():
             vc_vocab_obj = {}
             vc_vocab_obj = {
                     'word':word,
-                    'meaning':str(mean.encode("utf-8")),
-                    'short_def':str(shortdef.encode("utf-8")),
-                    'long_def':str(longdef.encode("utf-8"))
+                    'meaning':str(mean),
+                    'short_def':str(shortdef),
+                    'long_def':str(longdef)
             }
             #VcVocab_obj = VcVocab(word=word, meaning = str(mean), short_def = str(shortdef), long_def = str(longdef))
             logging.info(' The word {} is found online '.format(word))

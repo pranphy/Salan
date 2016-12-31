@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2016-12-31 00:28+0545\n"
+"PO-Revision-Date: 2016-12-31 00:37+0545\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ../../..\n"
+"Last-Translator: Prakash Gautam <pranphy@gmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ne_NP\n"
+"X-Poedit-SearchPath-0: i18n/ne_NP/gui\n"
+"X-Poedit-SearchPath-1: .\n"
+"X-Poedit-SearchPath-2: .\n"
+"X-Poedit-SearchPath-3: gui\n"
+
+#: InfoInputPanel.py:35
+msgid "Hello World"
+msgstr "हेलो दुनियाँ"
+
+#: InfoInputPanel.py:35
+msgid "Last Name"
+msgstr "थर"
+
+#: InfoInputPanel.py:35
+msgid "Home Address"
+msgstr "बसोबास ठेगाना"
+
+#: InfoInputPanel.py:35
+msgid "Email Address"
+msgstr "इमेल"
+
+#: InfoInputPanel.py:58
+msgid "Choice One"
+msgstr "पहिलो रोजाई"
+
+#: InfoInputPanel.py:58
+msgid "choice two"
+msgstr "दोस्रो रोजाई"
+
+#: InfoInputPanel.py:58
+msgid "Choice Three"
+msgstr "तेस्रो रोजाई"
+
+#: InfoInputPanel.py:58
+msgid "Choice Four"
+msgstr "चौथो रोजाई"
+
+#: InfoInputPanel.py:58
+msgid "Choice Five"
+msgstr "पाँचौँ रोजाई"
+
+#: InfoInputPanel.py:59
+msgid "Clean UP"
+msgstr "सफा गर्नुहोस्"

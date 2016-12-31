@@ -9,30 +9,30 @@ class InfoInputPanel ( wx.Panel ):
         wx.Panel.__init__ ( self, parent, id = wx.ID_ANY, pos = wx.DefaultPosition, 
                 size = wx.DefaultSize, style = wx.TAB_TRAVERSAL )
         
-        m_OutermostGBSizer = wx.GridBagSizer( 0, 0 )
-        m_OutermostGBSizer.SetFlexibleDirection( wx.BOTH )
-        m_OutermostGBSizer.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
-        m_OutermostGBSizer.Add( self.get_InputInfoArea( "Input Informations"),
+        OutermostGBSizer = wx.GridBagSizer( 0, 0 )
+        OutermostGBSizer.SetFlexibleDirection( wx.BOTH )
+        OutermostGBSizer.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
+        OutermostGBSizer.Add( self.getInputInfoArea( _('Input Informations')),
                 wx.GBPosition( 0, 0 ), wx.GBSpan( 1, 1 ), wx.EXPAND, 5 )
      
-        m_OutermostGBSizer.Add( self.getControlInfoArea("Control Area"),
+        OutermostGBSizer.Add( self.getControlInfoArea(_('Control Area')),
                 wx.GBPosition( 0, 1 ), wx.GBSpan( 1, 1 ), wx.EXPAND, 5 )
         
-        m_OutermostGBSizer.AddGrowableCol( 0 )
-        m_OutermostGBSizer.AddGrowableCol( 1 )
-        m_OutermostGBSizer.AddGrowableRow( 0 )
+        OutermostGBSizer.AddGrowableCol( 0 )
+        OutermostGBSizer.AddGrowableCol( 1 )
+        OutermostGBSizer.AddGrowableRow( 0 )
         
-        self.SetSizer( m_OutermostGBSizer )
+        self.SetSizer( OutermostGBSizer )
         self.Layout()
  
-    def get_InputInfoArea(self,label):
+    def getInputInfoArea(self,label):
         InputsSBSizer = wx.StaticBoxSizer( wx.StaticBox( self, wx.ID_ANY, label ), wx.VERTICAL )
         
         CellsFGSizer = wx.FlexGridSizer( 0, 2, 0, 0 )
 
         CellsFGSizer.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
 
-        input_list = ['First Name','Last Name','Home Address','Email Address']
+        input_list = [_('Hello World'),_('Last Name'),_('Home Address'),_('Email Address')]
 
         for label in input_list:
             self.addStaticText(InputsSBSizer,label,CellsFGSizer)
@@ -48,18 +48,18 @@ class InfoInputPanel ( wx.Panel ):
         holder.Add(staticText,1,wx.ALL|wx.ALIGN_CENTER|wx.EXPAND,5)
 
     def addTextCtrl(self,parent,holder,content=''):
-        m_TCtrl= wx.TextCtrl( parent.GetStaticBox(), wx.ID_ANY, content, wx.DefaultPosition, wx.DefaultSize, 0 )
-        m_TCtrl.SetMaxSize( wx.Size( -1,50 ) )
-        holder.Add(m_TCtrl, 1, wx.ALIGN_CENTER|wx.ALIGN_CENTER_VERTICAL|wx.ALL|wx.EXPAND, 5 )
+        TCtrl= wx.TextCtrl( parent.GetStaticBox(), wx.ID_ANY, content, wx.DefaultPosition, wx.DefaultSize, 0 )
+        TCtrl.SetMaxSize( wx.Size( -1,50 ) )
+        holder.Add(TCtrl, 1, wx.ALIGN_CENTER|wx.ALIGN_CENTER_VERTICAL|wx.ALL|wx.EXPAND, 5 )
 
     def getControlInfoArea(self,label):
         sbSizer5 = wx.StaticBoxSizer( wx.StaticBox( self, wx.ID_ANY, label ), wx.VERTICAL )
         bSizer2 = wx.BoxSizer( wx.VERTICAL )
-        m_radioBox1Choices = [ u"Choice One", u"choice two",'Choice Three' ,'Choice Four','Choice Five' ]
-        self.m_radioBox1 = wx.RadioBox( sbSizer5.GetStaticBox(), wx.ID_ANY, u"Clean UP",
-                wx.DefaultPosition, wx.DefaultSize, m_radioBox1Choices, 1, wx.RA_SPECIFY_COLS )
-        self.m_radioBox1.SetSelection( 0 )
-        bSizer2.Add( self.m_radioBox1, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
+        radioBox1Choices = [ _('Choice One'), _('choice two'),_('Choice Three') ,_('Choice Four'),_('Choice Five') ]
+        self.radioBox1 = wx.RadioBox( sbSizer5.GetStaticBox(), wx.ID_ANY, _('Clean UP'),
+                wx.DefaultPosition, wx.DefaultSize, radioBox1Choices, 1, wx.RA_SPECIFY_COLS )
+        self.radioBox1.SetSelection( 0 )
+        bSizer2.Add( self.radioBox1, 0, wx.ALL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
         
         sbSizer5.Add( bSizer2, 1, wx.EXPAND|wx.ALIGN_CENTER_HORIZONTAL, 5 )
         return sbSizer5

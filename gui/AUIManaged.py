@@ -2,6 +2,7 @@
 import wx
 import wx.lib.agw.aui as aui
 from . import InfoInputPanel as IIP
+from . import MeaningPanel as MP
 
 class AUIManager( aui.AuiManager ) :
     """ AUI Manager class """
@@ -29,11 +30,11 @@ class AUINotebook( aui.AuiNotebook ) :
         #----
 
         # add some pages to the notebook
-        pages = [IIP.InfoInputPanel, IIP.InfoInputPanel, IIP.InfoInputPanel ]
+        pages = [IIP.InfoInputPanel,MP.VocabPanel]
 
         pageCtr = 1
         for page in pages :
-            label = "Tab #%i" % pageCtr
+            label = 'Long tabnname and wrappable Tab #{}' .format(pageCtr)
             tab = page( self )
             self.AddPage( tab, label, False )
             pageCtr += 1

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxPanel" name="ID_HUFFMANPANEL" subclass="HuffmanPanel">
+		<style>wxTAB_TRAVERSAL</style>
+		<exstyle>wxWS_EX_VALIDATE_RECURSIVELY</exstyle>
+		<size>700,320</size>
+		<object class="wxGridBagSizer">
+			<vgap>0</vgap>
+			<hgap>0</hgap>
+			<growablecols>0,1</growablecols>
+			<growablerows>0</growablerows>
+			<object class="sizeritem">
+				<cellpos>0,0</cellpos>
+				<cellspan>1,1</cellspan>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxStaticBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<label>label</label>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxGridBagSizer">
+							<vgap>0</vgap>
+							<hgap>0</hgap>
+							<growablecols>0,1</growablecols>
+							<growablerows>0,1,2</growablerows>
+							<object class="sizeritem">
+								<cellpos>0,0</cellpos>
+								<cellspan>1,1</cellspan>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="SymbolTCtrl">
+									<style>wxHSCROLL|wxTE_LEFT</style>
+									<value></value>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<cellpos>0,1</cellpos>
+								<cellspan>1,1</cellspan>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="ProbTCtrl">
+									<pos>1,0</pos>
+									<value></value>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<cellpos>1,0</cellpos>
+								<cellspan>1,2</cellspan>
+								<flag>wxALL|wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxListCtrl" name="ReceivedProbsLCtrl">
+									<style>wxLC_ICON</style>
+									<pos>1,1</pos>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<cellpos>2,0</cellpos>
+								<cellspan>1,1</cellspan>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxButton" name="DeleteButton">
+									<label>Delete</label>
+									<default>0</default>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<cellpos>2,1</cellpos>
+								<cellspan>1,1</cellspan>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxButton" name="CalculateButton">
+									<label>Calculate</label>
+									<default>1</default>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<cellpos>0,1</cellpos>
+				<cellspan>1,1</cellspan>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxStaticBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<label>label</label>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxGrid" name="OutputGrid" />
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>

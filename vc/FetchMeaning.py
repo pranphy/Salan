@@ -36,7 +36,7 @@ class OrderVocab():
         self.word = word
         self.number_of_sent = 2
 
-    def get_online_sentences(self,word,vocabobj):
+    def get_online_sentences(self,word):
         logging.info('I am trying to find sentences online for word {}'.format(word))
         url = "https://corpus.vocabulary.com/api/1.0/examples.json?query="+\
             word+"&maxResults=" +str(self.number_of_sent)

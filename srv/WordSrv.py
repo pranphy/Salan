@@ -12,8 +12,8 @@ class WordSrv():
         self.fetch_meaning()
 
     def fetch_meaning(self):
-        ord_vocab = fthmean.OrderVocab(self.word)
-        self.word_info = ord_vocab.get_object()
+        self.ord_vocab = fthmean.OrderVocab(self.word)
+        self.word_info = self.ord_vocab.get_object()
         self.meaning_fetched = True
 
     def getMeaning(self):
@@ -25,4 +25,9 @@ class WordSrv():
 
     def getLongDef(self):
         return self.word_info['longdef']
+
+    def getSentences(self):
+        sent_list = self.ord_vocab.get_online_sentences(self.word)
+        for sent_dict in sent_list:
+            yield sent_dict['sentence']
 

@@ -39,27 +39,39 @@ class VocabPanel ( wx.Panel ):
         
         
     def createDetailArea(self,label="Fetched Detail"): 
-        FDetailSBSizer = wx.StaticBoxSizer( wx.StaticBox( self, wx.ID_ANY, label ), wx.VERTICAL )
-        DRowsFGSizer = wx.FlexGridSizer( 5, 2, 0, 0 )
-        DRowsFGSizer.AddGrowableCol( 1 )
-        DRowsFGSizer.SetFlexibleDirection( wx.BOTH )
-        DRowsFGSizer.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
+        self.FDetailSBSizer = wx.StaticBoxSizer( wx.StaticBox( self, wx.ID_ANY, label ), wx.VERTICAL )
+        self.DRowsFGSizer = wx.FlexGridSizer( 8, 2, 0, 0 )
+        self.DRowsFGSizer.AddGrowableCol( 1 )
+        self.DRowsFGSizer.SetFlexibleDirection( wx.BOTH )
+        self.DRowsFGSizer.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
         InfoDict = {'meaning':_('Meaning'),
                 'short_def':_('Short Definition'),
                 'long_def':_('Long Definition'),
-                'sentences':_('Sentences ')
         }
         self.DetailDict = {}
         for code,label in InfoDict.items():
-            FieldSText =  self.createStaticText(FDetailSBSizer,label)
+            FieldSText =  self.createStaticText(self.FDetailSBSizer,label)
             FieldSText.Wrap( -1 )
-            DRowsFGSizer.Add( FieldSText, 2, wx.ALL, 5 )
-            FieldTCtrl = self.createRichTextCtrl(FDetailSBSizer)
-            DRowsFGSizer.Add(FieldTCtrl, 7, wx.ALL|wx.EXPAND|wx.ALIGN_CENTER_VERTICAL, 5 )
+            self.DRowsFGSizer.Add( FieldSText, 2, wx.ALL, 5 )
+            FieldTCtrl = self.createRichTextCtrl(self.FDetailSBSizer)
+            self.DRowsFGSizer.Add(FieldTCtrl, 7, wx.ALL|wx.EXPAND|wx.ALIGN_CENTER_VERTICAL, 5 )
             self.DetailDict[code] = FieldTCtrl
 
-        FDetailSBSizer.Add( DRowsFGSizer, 1, wx.EXPAND, 5 )
-        return FDetailSBSizer
+        self.FDetailSBSizer.Add( self.DRowsFGSizer, 1, wx.EXPAND, 5 )
+        return self.FDetailSBSizer
+
+    def addSentences(self,word_srv):
+        for sentence in word_srv.getSentences():
+            FieldSText = self.createStaticText(self.FDetailSBSizer,label="Sentence ")
+            FieldSText.Wrap(-1)
+            self.DRowsFGSizer.Add( FieldSText, 2, wx.ALL, 5 )
+            print(' {}  ::: is the sentence '.format(sentence))
+            TextCtrl = self.createRichTextCtrl(self.FDetailSBSizer)
+            self.DRowsFGSizer.Add(TextCtrl, 7, wx.ALL|wx.EXPAND|wx.ALIGN_CENTER_VERTICAL, 5 )
+            TextCtrl.SetValue(sentence)
+
+        self.Layout()
+
 
     def OnEnterPressed(self,event):
         RequestedWord = self.InputWordTCtrl.GetValue()
@@ -72,6 +84,8 @@ class VocabPanel ( wx.Panel ):
         self.DetailDict['short_def'].SetValue(word_srv.get_short_def())
         self.DetailDict['long_def'].SetValue(word_srv.getLongDef())
 
+        self.addSentences(word_srv)
+
     def createRichTextCtrl(self,parent):
         TextCtrl = rt.RichTextCtrl( parent.GetStaticBox(), id=wx.ID_ANY, 
                 value=wx.EmptyString, pos=wx.DefaultPosition, 
@@ -83,6 +97,7 @@ class VocabPanel ( wx.Panel ):
                 value=wx.EmptyString, pos=wx.DefaultPosition, 
                 size=wx.DefaultSize,style=wx.TE_PROCESS_ENTER)
         return TextCtrl
+
 
     def createStaticText(self,parent,label='Static Label'):
         StaticText = wx.StaticText( parent.GetStaticBox(), wx.ID_ANY,
